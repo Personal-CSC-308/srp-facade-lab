@@ -20,11 +20,11 @@ public class RpgPlayer {
 
     public RpgPlayer(IGameEngine gameEngine) {
         this.gameEngine = gameEngine;
-        inventory = new Inventory();
-        carryingCapacity = MAX_CARRYING_CAPACITY;
+        this.inventory = new Inventory();
+        this.health = 0;
+        this.maxHealth = 0;
+        this.carryingCapacity = MAX_CARRYING_CAPACITY;
     }
-
-    public void useItem(Item item) { item.useItem(this);}
 
     public int getHealth() {
         return health;
@@ -46,7 +46,7 @@ public class RpgPlayer {
         return armour;
     }
 
-    void setArmour(int armour) {
+    public void setArmour(int armour) {
         this.armour = armour;
     }
 
@@ -54,7 +54,7 @@ public class RpgPlayer {
         return carryingCapacity;
     }
 
-    private void setCarryingCapacity(int carryingCapacity) {
+    public void setCarryingCapacity(int carryingCapacity) {
         this.carryingCapacity = carryingCapacity;
     }
 

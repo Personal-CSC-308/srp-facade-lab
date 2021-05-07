@@ -28,14 +28,6 @@ public class PlayerHealth {
         player.getGameEngine().playSpecialEffect("lots_of_gore");
     }
 
-    static void calculateStats(RpgPlayer player) {
-        int armour = 0;
-        for (int i = 0; i < player.getInventory().getNumItems(); i++) {
-            armour += player.getInventory().getItem(i).getArmour();
-        }
-        player.setArmour(armour);
-    }
-
     private static void heal(RpgPlayer player, int health) { player.setHealth(player.getHealth() + health); }
     private static void damage(RpgPlayer player, int damageToDeal) { player.setHealth(player.getHealth() - damageToDeal); }
 }

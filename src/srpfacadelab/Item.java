@@ -59,7 +59,7 @@ public class Item {
 
         player.getInventory().add(this);
 
-        PlayerHealth.calculateStats(player);
+        PlayerStats.calculateStats(player);
 
         return true;
     }
